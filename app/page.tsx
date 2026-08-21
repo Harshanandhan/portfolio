@@ -32,11 +32,11 @@ const PROJECTS = [
   {
     num: 4,
     status: "done",
-    name: "SIEM Dashboard",
-    desc: "Comprehensive SIEM solution using ELK Stack for real-time security monitoring and threat detection. Processes 10K+ events/second with 99% detection rate across Elasticsearch, Logstash, and Kibana.",
-    tags: ["Python", "ELK Stack", "Elasticsearch", "Kibana", "Cybersecurity"],
+    name: "SIEM Detection Lab",
+    desc: "Detection rules on generated auth, Apache, and iptables logs (no fake Kibana). SSH brute force T1110.001 (peak 31 fails / 60s), SQL tokens in URLs T1190 (14 requests), port scan T1046 (14 dest ports). Python matcher; Elasticsearch was not used.",
+    tags: ["Python", "Cybersecurity", "MITRE ATT&CK"],
     url: null,
-    github: "https://github.com/Harshanandhan/Siem-dashboard",
+    github: "https://github.com/Harshanandhan/siem-detection-lab",
   },
   {
     num: 5,
