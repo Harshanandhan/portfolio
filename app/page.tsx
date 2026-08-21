@@ -41,11 +41,11 @@ const PROJECTS = [
   {
     num: 5,
     status: "done",
-    name: "Vulnerability Scanner",
-    desc: "Full-featured Python vulnerability scanner covering port scanning, service detection, SQL injection/XSS testing, SSL analysis, and PDF reporting. Designed for network and web security assessment.",
-    tags: ["Python", "Nmap", "Cybersecurity", "Penetration Testing"],
+    name: "Host Security Scanner",
+    desc: "Python lab scanner: TCP connect scan, SSH/HTTP banners, GET checks for SQL error strings and reflected XSS, security headers, TLS peek. Ran against scanme.nmap.org: 4 open ports (22, 80, 9929, 31337), 5 missing headers. No CVE database and not a pentest.",
+    tags: ["Python", "Cybersecurity"],
     url: null,
-    github: "https://github.com/Harshanandhan/vulnerability-scanner",
+    github: "https://github.com/Harshanandhan/host-security-scanner",
   },
 
   // ── COMPLETED — SECURITY RESEARCH ─────────────────────────────────────────
