@@ -23,11 +23,11 @@ const PROJECTS = [
   {
     num: 3,
     status: "done",
-    name: "Smart Contract AI Detector",
-    desc: "AI/ML-powered vulnerability detector for Ethereum smart contracts. Detects reentrancy, access control issues, unchecked calls, and tx.origin vulnerabilities using CodeBERT + LSTM ensemble. 89.1% accuracy with SHAP explainability.",
-    tags: ["Python", "AI/ML", "Blockchain", "Solidity", "CodeBERT"],
+    name: "Solidity Vulnerability Detector",
+    desc: "Python CLI that splits each Solidity function and flags reentrancy-style calls, missing owner checks, unchecked low-level calls, block.timestamp, and tx.origin. Optional Slither. Local run on samples: 7 findings (CRITICAL) vs 0 (CLEAN). Pattern checks only — not an ML model and not an audit.",
+    tags: ["Python", "Solidity", "Cybersecurity"],
     url: null,
-    github: "https://github.com/Harshanandhan/Smart-contract-ai-detector",
+    github: "https://github.com/Harshanandhan/solidity-vulnerability-detector",
   },
   {
     num: 4,
