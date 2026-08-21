@@ -52,11 +52,11 @@ const PROJECTS = [
   {
     num: 6,
     status: "done",
-    name: "ETH Staking Contract Audit",
-    desc: "Secure ERC-20 staking contract in Solidity. Slither-audited, deployed to Sepolia testnet. Fixed reentrancy and access control vulnerabilities with a full audit report.",
-    tags: ["Solidity", "Slither", "Foundry", "OpenZeppelin"],
+    name: "ERC-20 Staking Vault",
+    desc: "Solidity staking vault: stake/withdraw/getReward on an ERC-20, ReentrancyGuard, Ownable reward rate. Checks-effects-interactions. npx hardhat test: 6 passing, 0 failing. Lab contract — not deployed to Sepolia in this work.",
+    tags: ["Solidity", "Hardhat", "OpenZeppelin"],
     url: null,
-    github: "https://github.com/Harshanandhan/eth-staking-audit",
+    github: "https://github.com/Harshanandhan/erc20-staking-vault",
   },
   {
     num: 7,
