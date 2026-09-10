@@ -1,7 +1,27 @@
 const PROJECTS = [
-  // Live / demos (honest status)
+  // Current work
   {
     num: 1,
+    status: "live",
+    name: "BuggerHunt",
+    desc: "SOC-style SIEM lab dashboard (Next.js). Real TypeScript detectors for SSH brute force (T1110.001), SQLi (T1190), and port scan (T1046) on RFC 5737 demo logs, plus a deterministic pattern hunter at /hunt (no LLM/threat-intel APIs). Evidence: deployed at buggerhunt.vercel.app with Railway Postgres; 29 vitest tests. Lab/demo — not Elastic, not a production SOC.",
+    tags: ["Next.js", "TypeScript", "Cybersecurity", "MITRE ATT&CK"],
+    url: "https://buggerhunt.vercel.app",
+    github: null,
+  },
+  {
+    num: 2,
+    status: "done",
+    name: "Hatch Agent",
+    desc: "Student internship agent (find → local pattern tailor → review-before-submit). Public repo is the product README; implementation stays private. Evidence: pattern tailor without API keys; Fortune 100 career-page tracker seed (Wikipedia top 100; official 1–500 paywalled). No LinkedIn scrape, no password harvest, no auto-submit by default.",
+    tags: ["Next.js", "TypeScript", "Students", "Internships"],
+    url: null,
+    github: "https://github.com/Harshanandhan/hatch-agent",
+  },
+
+  // Live / demos (honest status)
+  {
+    num: 3,
     status: "wip",
     name: "Repostly",
     desc: "Next.js app that turns a YouTube URL into LinkedIn post drafts (Supabase/Stripe/LLM wired in code). npm build verified 2026-09-09. www.repostly.org currently has an expired TLS cert — do not treat as a reliable live product or as having paying customers.",
@@ -10,7 +30,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/yt-repurposer-web",
   },
   {
-    num: 2,
+    num: 4,
     status: "done",
     name: "Documind (free)",
     desc: "FastAPI lab: local PDF/CSV/Excel text extract, then optional Groq Llama 3.3 structuring. Evidence 2026-09-09: imports + CSV extract proven. No OCR. Groq e2e and Railway deploy not verified (old homepage 404).",
@@ -21,7 +41,7 @@ const PROJECTS = [
 
   // Completed labs with reproduced evidence
   {
-    num: 3,
+    num: 5,
     status: "done",
     name: "Solidity Vulnerability Detector",
     desc: "Python CLI that splits each Solidity function and flags reentrancy-style calls, missing owner checks, unchecked low-level calls, block.timestamp, and tx.origin. Optional Slither. Sample run 2026-09-09: 7 findings vs 0 clean. Pattern checks only — not ML and not an audit.",
@@ -30,7 +50,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/solidity-vulnerability-detector",
   },
   {
-    num: 4,
+    num: 6,
     status: "done",
     name: "SIEM Detection Lab",
     desc: "Detection rules on generated auth, Apache, and iptables logs (no Elastic/Kibana). Evidence 2026-09-09: 3 alerts — SSH brute force T1110.001, SQLi T1190, port scan T1046. Local stdlib dashboard optional.",
@@ -39,7 +59,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/siem-detection-lab",
   },
   {
-    num: 5,
+    num: 7,
     status: "done",
     name: "Host Security Scanner",
     desc: "Python lab scanner: TCP connect, banners, simple web checks, headers, TLS peek. Evidence 2026-09-09 on scanme.nmap.org: 4 open ports, 5 missing headers. No CVE database — not a pentest.",
@@ -48,7 +68,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/host-security-scanner",
   },
   {
-    num: 6,
+    num: 8,
     status: "done",
     name: "ERC-20 Staking Vault",
     desc: "Solidity staking vault with ReentrancyGuard and CEI. Evidence 2026-09-09: npx hardhat test — 6 passing, 0 failing. Lab contract — not a mainnet deploy.",
@@ -57,7 +77,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/erc20-staking-vault",
   },
   {
-    num: 7,
+    num: 9,
     status: "done",
     name: "DividendToken",
     desc: "Lab ERC-20 where staking rewards and holder dividends compete for the same balance. Evidence 2026-09-09: npx hardhat test — 33 passing. Not a product or audit.",
@@ -66,7 +86,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/dividend-token",
   },
   {
-    num: 8,
+    num: 10,
     status: "done",
     name: "BharatBot",
     desc: "Lab FastAPI RAG over 10 local Indian history chunks (Chroma + MiniLM). Evidence 2026-09-09: /health 200 and retrieval works. Groq generation not proven on the current key.",
@@ -75,7 +95,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/bharatbot",
   },
   {
-    num: 9,
+    num: 11,
     status: "done",
     name: "document-agent",
     desc: "Lab FastAPI + Claude tool-use document agent (read/split/validate/export tools in code). Needs ANTHROPIC_API_KEY. Not a production multi-tenant product.",
@@ -84,7 +104,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/document-agent",
   },
   {
-    num: 10,
+    num: 12,
     status: "done",
     name: "IRIS Vessel Segmentation",
     desc: "Jupyter/Colab lab: U-Net + EfficientNetB3 iris vessel segmentation notebook. Educational CV experiment — not a production biometric system.",
@@ -95,7 +115,7 @@ const PROJECTS = [
 
   // Thin / placeholder — honest labels
   {
-    num: 11,
+    num: 13,
     status: "wip",
     name: "x402 Payment Gateway",
     desc: "Docs-only learning stub about Coinbase x402 / HTTP 402. No runnable backend or frontend in the repo (as of 2026-09-09).",
@@ -104,7 +124,7 @@ const PROJECTS = [
     github: "https://github.com/Harshanandhan/x402-Payment-Gateway",
   },
   {
-    num: 12,
+    num: 14,
     status: "wip",
     name: "Multi-Agent Healthcare System",
     desc: "Healthcare multi-agent experiment stub. Verify README/code before citing specific agent workflows.",
@@ -118,7 +138,7 @@ const SKILLS = {
   "AI / ML": ["Python", "TensorFlow", "scikit-learn", "CodeBERT", "LSTM", "NLP", "LangChain", "Groq"],
   "Cybersecurity": ["Python", "Detection Engineering", "MITRE ATT&CK", "OWASP", "Wireshark", "NIST"],
   "Blockchain": ["Solidity", "Ethereum", "Foundry", "Hardhat", "Slither", "OpenZeppelin", "DeFi", "EVM"],
-  "Development": ["Next.js", "FastAPI", "TypeScript", "JavaScript", "Rust", "Bash", "SQL", "Docker"],
+  "Development": ["Next.js", "FastAPI", "TypeScript", "JavaScript", "Rust", "Bash", "SQL", "Docker", "Vercel"],
 };
 
 const TAG_COLORS: Record<string, string> = {
@@ -135,6 +155,10 @@ const TAG_COLORS: Record<string, string> = {
   "DeFi": "bg-amber-500/10 text-amber-400 border-amber-500/20",
   "Groq": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
   "LangChain": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  "TypeScript": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  "MITRE ATT&CK": "bg-red-500/10 text-red-400 border-red-500/20",
+  "Students": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+  "Internships": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
 };
 
 function Tag({ label }: { label: string }) {
@@ -280,57 +304,59 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Live Products — full-width spotlight */}
-          <div className="flex flex-col gap-4">
-            <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Live Products</p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {PROJECTS.filter((p) => p.status === "live").map((p) => (
-                <div
-                  key={p.name}
-                  className="relative flex flex-col gap-4 p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 ring-1 ring-emerald-500/10"
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex flex-col gap-1">
-                      <span className="text-xs text-gray-500 font-mono">#{String(p.num).padStart(2, "0")}</span>
-                      <h3 className="font-semibold text-white text-lg">{p.name}</h3>
-                    </div>
-                    <div className="flex flex-col items-end gap-2 shrink-0">
-                      <StatusDot status={p.status} />
-                      <div className="flex items-center gap-2">
-                        {p.url && (
-                          <a
-                            href={p.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs text-emerald-400 border border-emerald-500/40 px-2.5 py-1 rounded-lg hover:bg-emerald-500/10 transition-colors font-medium"
-                          >
-                            Live ↗
-                          </a>
-                        )}
-                        {p.github && (
-                          <a
-                            href={p.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-xs text-gray-400 border border-white/10 px-2.5 py-1 rounded-lg hover:bg-white/10 transition-colors"
-                          >
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                            </svg>
-                            GitHub
-                          </a>
-                        )}
+          {/* Live Products — full-width spotlight (only if any live) */}
+          {PROJECTS.some((p) => p.status === "live") && (
+            <div className="flex flex-col gap-4">
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Live Products</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {PROJECTS.filter((p) => p.status === "live").map((p) => (
+                  <div
+                    key={p.name}
+                    className="relative flex flex-col gap-4 p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 ring-1 ring-emerald-500/10"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex flex-col gap-1">
+                        <span className="text-xs text-gray-500 font-mono">#{String(p.num).padStart(2, "0")}</span>
+                        <h3 className="font-semibold text-white text-lg">{p.name}</h3>
+                      </div>
+                      <div className="flex flex-col items-end gap-2 shrink-0">
+                        <StatusDot status={p.status} />
+                        <div className="flex items-center gap-2">
+                          {p.url && (
+                            <a
+                              href={p.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-emerald-400 border border-emerald-500/40 px-2.5 py-1 rounded-lg hover:bg-emerald-500/10 transition-colors font-medium"
+                            >
+                              Live ↗
+                            </a>
+                          )}
+                          {p.github && (
+                            <a
+                              href={p.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 text-xs text-gray-400 border border-white/10 px-2.5 py-1 rounded-lg hover:bg-white/10 transition-colors"
+                            >
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                              </svg>
+                              GitHub
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
+                    <p className="text-sm text-gray-300 leading-relaxed flex-1">{p.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {p.tags.map((t) => <Tag key={t} label={t} />)}
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-300 leading-relaxed flex-1">{p.desc}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {p.tags.map((t) => <Tag key={t} label={t} />)}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Completed Projects */}
           <div className="flex flex-col gap-4">
