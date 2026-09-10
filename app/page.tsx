@@ -46,7 +46,7 @@ const PROJECTS = [
     name: "Solidity Vulnerability Detector",
     desc: "Python CLI that splits each Solidity function and flags reentrancy-style calls, missing owner checks, unchecked low-level calls, block.timestamp, and tx.origin. Optional Slither. Sample run 2026-09-09: 7 findings vs 0 clean. Pattern checks only — not ML and not an audit.",
     tags: ["Python", "Solidity", "Cybersecurity"],
-    url: null,
+    url: "https://solidity-vuln-detector-demo-production.up.railway.app",
     github: "https://github.com/Harshanandhan/solidity-vulnerability-detector",
   },
   {
