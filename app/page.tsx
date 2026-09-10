@@ -89,9 +89,9 @@ const PROJECTS = [
     num: 10,
     status: "done",
     name: "BharatBot",
-    desc: "Lab FastAPI RAG over 10 local Indian history chunks (Chroma + MiniLM). Evidence 2026-09-09: /health 200 and retrieval works. Groq generation not proven on the current key.",
+    desc: "Lab FastAPI RAG over 10 local Indian history chunks (Chroma + MiniLM). Live lab RAG over 10 chunks. Evidence: /health chunks=10; retrieval works; Groq optional (may fall back). https://bharatbot-production-9181.up.railway.app",
     tags: ["Python", "FastAPI", "RAG", "Chroma"],
-    url: null,
+    url: "https://bharatbot-production-9181.up.railway.app",
     github: "https://github.com/Harshanandhan/bharatbot",
   },
   {
