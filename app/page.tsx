@@ -3,7 +3,7 @@ const PROJECTS = [
   {
     num: 1,
     status: "live",
-    name: "BuggerHunt",
+    name: "SIEM Dashboard",
     desc: "SOC-style SIEM lab dashboard (Next.js). Real TypeScript detectors for SSH brute force (T1110.001), SQLi (T1190), and port scan (T1046) on RFC 5737 demo logs, plus a deterministic pattern hunter at /hunt (no LLM/threat-intel APIs). Evidence: deployed at buggerhunt.vercel.app with Railway Postgres; 29 vitest tests. Lab/demo — not Elastic, not a production SOC.",
     tags: ["Next.js", "TypeScript", "Cybersecurity", "MITRE ATT&CK"],
     url: "https://buggerhunt.vercel.app",
