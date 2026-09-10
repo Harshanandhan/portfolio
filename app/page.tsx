@@ -31,18 +31,18 @@ const PROJECTS = [
   },
   {
     num: 4,
-    status: "done",
+    status: "live",
     name: "Documind (free)",
-    desc: "FastAPI lab: local PDF/CSV/Excel text extract, then optional Groq Llama 3.3 structuring. Evidence 2026-09-09: imports + CSV extract proven. No OCR. Groq e2e and Railway deploy not verified (old homepage 404).",
+    desc: "FastAPI lab: local PDF/CSV/Excel text extract, then optional Groq Llama 3.3 structuring. Evidence 2026-09-09: imports + CSV extract proven. No OCR. Live extract UI on Railway (api_key_set may be false = extract-only). https://documind-free-production.up.railway.app",
     tags: ["Python", "FastAPI", "Groq"],
-    url: null,
+    url: "https://documind-free-production.up.railway.app",
     github: "https://github.com/Harshanandhan/Documind-Free-version",
   },
 
   // Completed labs with reproduced evidence
   {
     num: 5,
-    status: "done",
+    status: "live",
     name: "Solidity Vulnerability Detector",
     desc: "Python CLI that splits each Solidity function and flags reentrancy-style calls, missing owner checks, unchecked low-level calls, block.timestamp, and tx.origin. Optional Slither. Sample run 2026-09-09: 7 findings vs 0 clean. Pattern checks only — not ML and not an audit.",
     tags: ["Python", "Solidity", "Cybersecurity"],
@@ -96,16 +96,16 @@ const PROJECTS = [
   },
   {
     num: 11,
-    status: "done",
+    status: "live",
     name: "document-agent",
-    desc: "Lab FastAPI + Claude tool-use document agent (read/split/validate/export tools in code). Needs ANTHROPIC_API_KEY. Not a production multi-tenant product.",
+    desc: "Lab FastAPI + Claude tool-use document agent (read/split/validate/export tools in code). Live lab UI on Railway with Claude tool-use when key configured. Not a production multi-tenant product. https://luminous-compassion-production-1f80.up.railway.app",
     tags: ["Python", "FastAPI", "Anthropic"],
-    url: null,
+    url: "https://luminous-compassion-production-1f80.up.railway.app",
     github: "https://github.com/Harshanandhan/document-agent",
   },
   {
     num: 12,
-    status: "done",
+    status: "live",
     name: "IRIS Vessel Segmentation",
     desc: "Jupyter/Colab lab: U-Net + EfficientNetB3 iris vessel segmentation notebook. Educational CV experiment — not a production biometric system.",
     tags: ["Python", "TensorFlow", "Keras", "Jupyter"],
