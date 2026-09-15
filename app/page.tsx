@@ -1,6 +1,13 @@
 const PROJECTS = [
-  // Current work
   {
+    num: 0,
+    status: "live",
+    name: "Flash Loan Risk Lab",
+    desc: "Educational Next.js + Solidity lab: flash-borrow demo capital, spike an unsecured spot oracle, VulnerableVault drain succeeds in-lab vs MitigatedVault (TWAP + circuit breaker) blocks it. Evidence 2026-09-15: npx hardhat test — 6 passing. Demo funds only — not an exploit kit or mainnet toolkit.",
+    tags: ["Solidity", "Hardhat", "Next.js", "DeFi Security"],
+    url: "https://flash-loan-risk-lab.vercel.app",
+    github: "https://github.com/Harshanandhan/flash-loan-risk-lab",
+  },  {
     num: 1,
     status: "live",
     name: "SIEM Dashboard",
